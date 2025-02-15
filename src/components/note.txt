@@ -1,0 +1,33 @@
+use effect
+-----------
+Used to handle side effect
+eg:api
+syntax:- useEffect(()=>{ },Dependencies)
+         1.first arg -  function
+         2.second arg - Dependencies(optional)
+           =>no Dependencies -> call in every render
+           =>empty array as Dependencies -> call once the component render
+           =>state/props ([state/props]) as Dependencies -> calls when the value of state/props changes
+
+
+State Lifting
+--------------
+=> The process of sharing data between components(other than parent-child)
+=> State is created in the closest common parent/ancestor.
+=> Function to  change the state is passes to the component which provide data and state is passed to the component which display data.
+
+
+Sharing data to server side
+----------------------------
+1>Body parameter
+2>Path parameter
+3>Query parameter
+
+
+Drag and Drop Mechanism
+-----------------------
+1> Draggable -> provide to the element which need to be dragged.
+2> Droppable -> provide to the element where the droping is happends.
+3> onDragStart -> setData("key",value) => Data Share
+4> onDragOver
+5> onDrop -> getData(key) => access data
